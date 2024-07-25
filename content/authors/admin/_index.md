@@ -35,8 +35,8 @@ profiles:
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/yangfengstat
-  - icon: brands/instagram
-    url: https://www.instagram.com/
+ # - icon: brands/instagram
+ #   url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/yangfengstat
   - icon: brands/linkedin
@@ -47,15 +47,15 @@ profiles:
     url: https://orcid.org/
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Machine Learning
+  - High-dimensional Statistics
+  - Social Networks
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: PhD Operations Research
+    institution: Princeton University
+    date_start: 2006-09-01
+    date_end: 2010-06-01
     summary: |
       Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     button:
