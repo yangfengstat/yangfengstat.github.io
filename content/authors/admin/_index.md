@@ -39,12 +39,12 @@ profiles:
  #   url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/yangfengstat
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
+ # - icon: brands/linkedin
+ #   url: https://www.linkedin.com/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en
-  - icon: academicons/orcid
-    url: https://orcid.org/
+ # - icon: academicons/orcid
+ #   url: https://orcid.org/
 
 interests:
   - Machine Learning
