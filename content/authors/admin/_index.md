@@ -183,4 +183,71 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Yang Feng is a Professor of [Biostatistics](https://publichealth.nyu.edu/department/biostatistics) at the [School of Global Public Health](https://publichealth.nyu.edu/), while also serving as an affiliate faculty member at the [Center for Data Science](https://cds.nyu.edu/) and [PRIISM](https://steinhardt.nyu.edu/priism), at [New York University](https://www.nyu.edu/). 
+
+Feng's research interests encompass the theoretical and methodological aspects of machine learning, high-dimensional statistics, network models, and nonparametric statistics, leading to a wealth of practical applications. He has published over 60 peer-reviewed
+articles with over **3,600** [Google Scholar Citations](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en). 
+
+
+He is currently an associate editor for the *Annals of Applied Statistics, Journal of American Statistical Association, Journal of Business \& Economic Statistics*, and *Statistica Sinica*. His research has been generously supported by multiple grants from the National Science Foundation (NSF) and the National Institutes of Health (NIH). He is a fellow of the *American Statistical Association* (ASA), the *Institute of Mathematical Statistics* (IMS) and an elected member of the *International Statistical Institute* (ISI). 
+
+
+
+{{< notice note>}}
++ Dr. Feng was elected as a fellow of the Institute of Mathematical Statistics (IMS) in 2023. "For outstanding contributions to high-dimensional statistics, nonparametric statistics, social network analysis, and statistical machine learning; for statistical software development; and for dedicated service to the profession."
+
++ Dr. Feng was elected as a fellow of the American Statistical Association (ASA) in 2022. "For development of effective, practical, and efficient statistical methods that are backed by theory and are relevant and accessible to practitioners; for wide dissemination of methods in publicly available software; and for outstanding teaching."
+{{< /notice >}}
+
+<!--- 
+{{< notice info >}}
++ 2022 Workshop on Statistical Network Analysis and Beyond: 
+
+Hosted by the GPH Department of Biostatistics from Wednesday, August 3 - Friday, August 5, 2022.
+
+We are bringing together researchers on network analysis and beyond to exchange ideas and recent works for SNAB2022. The workshop will cover topics including analysis of social networks and biological networks, tensor analysis, and deep learning.
+
+Please visit [here](https://yangfeng.hosting.nyu.edu/snab2022/) to learn more about the workshop. 
+{{< /notice >}}
+---> 
+
+
+He has published papers in *Annals of Statistics, Annals of Applied Statistics, Biometrika, IEEE Transactions on Pattern Analysis and Machine Intelligence, Journal of Royal Statistical Society Series B, Journal of the American Statistical Association, Journal of Machine Learning Research, Science Advances, Journal of Econometrics, Journal of Business & Economic Statistics*, etc. 
+
+He is currently an associate editor for 
+- [Journal of the American Statistical Association](https://www.tandfonline.com/journals/uasa20)
+- [Annals of Applied Statistics](https://imstat.org/journals-and-publications/annals-of-applied-statistics/)
+- [Journal of Business & Economic Statistics](https://amstat.tandfonline.com/loi/jbes)
+
+His research is partially supported by 
+- NIH 1R21AG074205-01: Multiclass classification under prioritized error control and specific error costs with applications to dementia classification
+
+- NSF [Grant DMS-2324489](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2324489): Collaborative Research: New Theory and Methods for High-Dimensional Multi-Task and Transfer Learning Inference
+<!--- 
+- NSF [CAREER Grant DMS-2013789](https://nsf.gov/awardsearch/showAward?AWD_ID=2013789): CAREER: Statistical inference of network and relational data
+- NSF [Grant 2034022](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2034022&HistoricalAwards=false): RAPID: Behavioral Epidemic Modeling For COVID-19 Containment
+--->
+
+[My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate))
+
+{{% staticref "files/Feng_Y_math_genealogy_graph.pdf" %}}My Math Genealogy Graph{{% /staticref %}}
+
+## Open Positions and Opportunities:
+
+<!--- 
++ Post-Doctoral Associate in Biostatistics: 
+
+The Department of Biostatistics at the NYU School of Global Public Health is seeking candidates with a Ph.D. in Statistics/Biostatistics, Computer Science, or related fields for an exciting full-time Post-Doctoral Associate position available beginning on Sep 1, 2023, working with Dr. Yang Feng and Dr. Rebecca Betensky. 
+
+The postdoc associate will work to:
+
+  + Develop novel machine learning methods and their associate theory.
+  + Apply existing and new machine learning methods to public health and medical data.
+  + Develop companion software.
+
+Please apply via Interfolio [here](https://apply.interfolio.com/104510).
+---> 
+
++ Research Assistant: 
+
+Feng Lab is continuously looking for talents at undergraduate, master and Ph.D. level. If you are interested, please submit an application at https://bit.ly/2KMEflH.
