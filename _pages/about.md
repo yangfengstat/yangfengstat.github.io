@@ -2,24 +2,39 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: Yang_Feng.jpg
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>708 Broadway, Room 433</p>
+    <p>Department of Biostatistics</p>
+    <p>New York University</p>
+    <p>New York, NY 10003</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+Yang Feng is a Professor of [Biostatistics](https://publichealth.nyu.edu/department/biostatistics) at the [School of Global Public Health](https://publichealth.nyu.edu/), while also serving as an affiliate faculty member at the [Center for Data Science](https://cds.nyu.edu/) and [PRIISM](https://steinhardt.nyu.edu/priism), at [New York University](https://www.nyu.edu/). 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Feng's research interests encompass the theoretical and methodological aspects of machine learning, high-dimensional statistics, network models, and nonparametric statistics, leading to a wealth of practical applications. He has published over 70 peer-reviewed
+articles with over **4,000** [Google Scholar Citations](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en). 
+He is a fellow of the *American Statistical Association* (ASA), the *Institute of Mathematical Statistics* (IMS) and an elected member of the *International Statistical Institute* (ISI). 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+He is currently an associate editor for 
+- [Journal of the American Statistical Association](https://www.tandfonline.com/journals/uasa20)
+- [Annals of Applied Statistics](https://imstat.org/journals-and-publications/annals-of-applied-statistics/)
+- [Journal of Business & Economic Statistics](https://amstat.tandfonline.com/loi/jbes)
+- [Journal of Computational & Graphical Statistics](https://www.tandfonline.com/toc/ucgs20/current)
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+His research is partially supported by 
+
+- NSF [Grant DMS-2324489](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2324489): Collaborative Research: New Theory and Methods for High-Dimensional Multi-Task and Transfer Learning Inference
+
+
+[My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate))
+
+[A Short CV](assets/pdf/Feng_Yang_Short_CV.pdf)

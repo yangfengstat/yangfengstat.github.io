@@ -11,9 +11,13 @@ nav_order: 2
 
 <!-- Bibsearch Feature -->
 
+For a more up-to-date list of publications, please visit [My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate)).
+
+
 {% include bib_search.liquid %}
 
 <div class="publications">
+
 
 {% bibliography %}
 
