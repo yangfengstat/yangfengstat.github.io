@@ -5,17 +5,30 @@ nav_title: SNAB 2025
 permalink: /snab2025/
 ---
 
+
+
 # Welcome to SNAB 2025
 
-The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB2025) is scheduled to take place on June 4-6, 2025 at the [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in Tokyo, Japan.
+The **2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)** will take place on **June 4-6, 2025** at the renowned [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in **Tokyo, Japan**.
 
-[Register Now](#) {: .button}
+[Register Now](#){: .button}
+
+![Hotel New Otani](assets/img/hotel.jpg "Hotel New Otani, 
+Tokyo"){: style="border-radius: 10px; max-width: 100%; margin: auto; display: block;"}
 
 ---
 
 ## About the Conference
 
-Over the span of three days, this workshop aims to unite researchers in the field of network science and related disciplines, providing an avenue for the exchange of innovative ideas and recent findings. The workshop will encompass a wide range of topics, ranging from statistical network modeling to more extensive fields such as tensor modeling, deep learning, and text analysis.
+SNAB 2025 is a **three-day workshop** bringing together experts in **network science** and related fields. The conference serves as a platform for sharing cutting-edge research and fostering collaboration.
+
+### Topics Include:
+- Statistical network modeling
+- Tensor analysis and modeling
+- Deep learning
+- Transfer learning and multi-task learning
+- Text analysis in network structures
+- Applications in social, biological, and public health
 
 ---
 
@@ -27,13 +40,29 @@ Over the span of three days, this workshop aims to unite researchers in the fiel
 - [Maggie Xiaoyue Niu](https://sites.google.com/view/maggiexniu/) (Penn State University)
 - [Ji Zhu](https://dept.stat.lsa.umich.edu/~jizhu/) (University of Michigan)
 
+---
+
+## Past SNAB Workshops
+
+- [**SNAB 2024**](https://sites.google.com/view/snab2024/) - Bahamas  
+- [**SNAB 2023**](https://www.snab2023.org/) - Anchorage, Alaska  
+- [**SNAB 2022**](https://yangfeng.hosting.nyu.edu/snab2022/) - New York  
+- [**SNAB 2021**](https://dept.stat.lsa.umich.edu/~jizhu/snab2021/) - Virtual  
+
+---
+## Sponsors
+
+We are grateful to our sponsors for their support of SNAB 2025:
+
+![IMS](assets/img/ims.png "IMS")
 
 ---
 
-## Past SNAB workshops:
+## Why Attend?
 
-- [SNAB2024](https://sites.google.com/view/snab2024/), Bahamas
-- [SNAB2023](https://www.snab2023.org/), Anchorage, Alaska
-- [SNAB2022](https://yangfeng.hosting.nyu.edu/snab2022/), New York. 
-- [SNAB2021](https://dept.stat.lsa.umich.edu/~jizhu/snab2021/), Virtual.
+✨ **Top-tier speakers** from around the world  
+✨ **Cutting-edge topics** in network science  
+✨ **Networking opportunities** with leading researchers  
+✨ **Explore Tokyo**, a city where tradition meets innovation  
 
+We look forward to seeing you at **SNAB 2025** in Tokyo!

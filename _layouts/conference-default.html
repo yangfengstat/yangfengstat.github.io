@@ -5,6 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/conference.css' | relative_url }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .header {
+      background: #0056b3;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .header .site-title {
+      margin: 0;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .nav {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .nav-link:hover {
+      background-color: #004080;
+    }
+    .banner {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .banner-container {
+      position: relative;
+      text-align: center;
+    }
+    .banner-caption {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+    .main-content {
+      padding: 2rem 1rem;
+    }
+    .footer {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+    }
+    .footer a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -17,6 +88,15 @@
       </nav>
     </div>
   </header>
+
+  {% if site.banner.image %}
+  <div class="banner-container">
+    <img src="{{ site.banner.image | relative_url }}" alt="{{ site.banner.alt }}" class="banner">
+    {% if site.banner.caption %}
+    <div class="banner-caption">{{ site.banner.caption }}</div>
+    {% endif %}
+  </div>
+  {% endif %}
 
   <main class="main-content">
     <div class="container">
