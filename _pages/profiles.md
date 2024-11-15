@@ -4,7 +4,7 @@ permalink: /people/
 title: people
 description: 
 nav: true
-nav_order: 7
+nav_order: 8
 image_path: "../assets/img/"
 ---
 Here you can find information about current team members and alumni who have been part of our group.
@@ -122,6 +122,10 @@ Here you can find information about current team members and alumni who have bee
   <div class="person">
     <img src="{{ page.image_path }}vivien-wei.jpg" alt="Vivien Wei">
     <p>Vivien Wei</p>
+  </div> 
+  <div class="person">
+    <img src="{{ page.image_path }}zian-liu.jpg" alt="Zian Liu">
+    <p>Zian Liu</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}wanyi-wang.jpg" alt="Wanyi Wang">

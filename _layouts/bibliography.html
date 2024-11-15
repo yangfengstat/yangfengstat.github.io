@@ -1,0 +1,27 @@
+<div class="tags">
+  <p><strong>Filter by tag:</strong></p>
+  <ul>
+    {% assign tags = site.bibliography | map: "keywords" | join: "," | split: "," | uniq | sort %}
+    {% for tag in tags %}
+      <li>
+        <a href="#{{ tag | slugify }}" style="color: #0056b3; text-decoration: none;">
+          {{ tag }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% for tag in tags %}
+<h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+<ul>
+  {% for entry in site.bibliography %}
+    {% if entry.keywords contains tag %}
+      <li>
+        <strong>{{ entry.title }}</strong> by {{ entry.author }} ({{ entry.year }})<br>
+        <em>{{ entry.journal }}</em>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
