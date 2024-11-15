@@ -1,11 +1,13 @@
 ---
 layout: conference-default
 title: "SNAB 2025"
+nav_title: SNAB 2025
+permalink: /snab2025/
 ---
 
 # Welcome to SNAB 2025
 
-The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB2025) is scheduled to take place on June 4-6, 2025 at the [Hotel New Otani](http://www.newotani.co.jp/tokyo/) in Tokyo, Japan.
+The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB2025) is scheduled to take place on June 4-6, 2025 at the [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in Tokyo, Japan.
 
 [Register Now](#) {: .button}
 

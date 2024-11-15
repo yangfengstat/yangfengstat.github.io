@@ -5,7 +5,7 @@ title: "Venue"
 
 # Conference Venue
 
-The conference will be held at the [Hotel New Otani](http://www.newotani.co.jp/tokyo/) in Tokyo, Japan.
+The conference will be held at the [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in Tokyo, Japan.
 
 Address: 4-1 Kioicho, Chiyoda City, Tokyo 102-8578, Japan
 
