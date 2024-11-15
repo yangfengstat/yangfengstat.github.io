@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/conference.css' | relative_url }}">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <nav class="nav">
+        {% for item in site.data.conference_nav %}
+          <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{ site.title }} - {{ 'now' | date: "%Y" }} | <a href="{{ '/' | relative_url }}">Back to Main Site</a></p>
+    </div>
+  </footer>
+</body>
+</html>
