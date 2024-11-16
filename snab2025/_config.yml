@@ -1,6 +1,35 @@
 title: "SNAB 2025"
-description: "Welcome to the official Conference 2024 website."
+description: "Welcome to SNAB 2025."
 baseurl: "/snab2025"
 url: "https://yangfengstat.github.io"
 paginate: 10
 theme: al-folio
+
+# -----------------------------------------------------------------------------
+# Conference Information
+# -----------------------------------------------------------------------------
+
+conference_name: "SNAB 2025"
+conference_tagline: "Statistical Network Analysis and Beyond"
+conference_date: "June 4-6, 2025"
+conference_location: "Hotel New Otani, Tokyo, Japan"
+
+# -----------------------------------------------------------------------------
+# Appearance and Navigation
+# -----------------------------------------------------------------------------
+
+navbar_fixed: true # Fixed navigation bar at the top
+footer_fixed: true # Fixed footer at the bottom
+search_enabled: true # Enable search functionality
+enable_darkmode: true # Support for light/dark themes
+
+# Colors and Branding
+primary_color: "#0056b3" # Main accent color
+secondary_color: "#66b3ff" # Secondary accent color
+background_color_light: "#ffffff" # Background color for light mode
+background_color_dark: "#1e1e1e" # Background color for dark mode
+
+enable_sponsors_section: true # Enable sponsors section on the site
+enable_agenda_section: true # Include a detailed agenda section
+enable_registration: true # Provide registration links
+registration_url: "/register"
