@@ -54,15 +54,8 @@ SNAB 2025 is a **three-day workshop** bringing together experts in **network sci
 
 We are grateful to our sponsors for their support of SNAB 2025:
 
-![IMS](assets/img/ims.png "IMS")
+![IMS](assets/img/ims.png "IMS"){: style="border-radius: 10px; max-width: 20%; margin: 20px auto; display: block;"}
 
 ---
-
-## Why Attend?
-
-✨ **Top-tier speakers** from around the world  
-✨ **Cutting-edge topics** in network science  
-✨ **Networking opportunities** with leading researchers  
-✨ **Explore Tokyo**, a city where tradition meets innovation  
 
 We look forward to seeing you at **SNAB 2025** in Tokyo!
