@@ -330,7 +330,6 @@ scholar:
   order: descending
   group_by: year
   group_order: descending
-
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
@@ -364,6 +363,7 @@ filtered_bibtex_keywords:
     supp,
     video,
     website,
+    keywords
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)

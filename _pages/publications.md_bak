@@ -1,0 +1,53 @@
+---
+layout: page
+title: "Publications"
+permalink: /publications/
+---
+
+# Publications (Debugging)
+
+## Debug All Tags:
+<pre>{{ site.scholar.entries | map: 'keywords' | join: ',' | split: ',' | uniq | sort | join: ', ' }}</pre>
+
+## Debug Entries:
+<pre>{{ site.scholar.entries | inspect }}</pre>
+
+
+{% assign all_tags = site.scholar.entries | map: 'keywords' | join: ',' | split: ',' | uniq | sort %}
+
+<div class="tags">
+  <p><strong>Filter by tag:</strong></p>
+  <ul>
+    {% for tag in all_tags %}
+      {% if tag != "" %}
+        <li style="display: inline-block; margin-right: 10px;">
+          <a href="#{{ tag | slugify }}" style="text-decoration: none; background: #f0f0f0; padding: 5px 10px; border-radius: 5px;">
+            {{ tag }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+---
+
+<div class="publications">
+  {% for tag in all_tags %}
+    {% if tag != "" %}
+      <h3 id="{{ tag | slugify }}">{{ tag | capitalize }}</h3>
+      <ul>
+        {% for entry in site.scholar.entries %}
+          {% if entry.keywords contains tag %}
+            <li>
+              <strong>{{ entry.title }}</strong>  
+              {% if entry.author %}by {{ entry.author | join: ", " }}{% endif %} 
+              ({{ entry.year }})
+              {% if entry.journal %}<br><em>{{ entry.journal }}</em>{% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</div>

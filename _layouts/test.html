@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Scholar</title>
+</head>
+<body>
+  <h1>Test Scholar</h1>
+  <pre>
+    {% for entry in site.scholar.entries %}
+      {{ entry | jsonify }}
+    {% endfor %}
+  </pre>
+</body>
+</html>
