@@ -7,8 +7,9 @@ nav: true
 nav_order: 2
 ---
 
-<!-- _pages/pub_test.md -->
+<!-- _pages/publications.md -->
 
+<!-- Onclick Filter -->
 <script>
 function filterSubject(filter) {
   // Select all bibliography sections (years)
@@ -56,6 +57,7 @@ function filterSubject(filter) {
 For a more up-to-date list of publications, please visit [My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate)).
 
 
+<!-- Auto Category Label Creation -->
 <script>
 // Function to dynamically generate badge styles and elements
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,10 +145,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-
 <center>
   <!-- Dynamic badges will be inserted here by the script -->
 </center>
+
+
+
+<!-- Example of Manually Adding the badge
+<center>
+<p>
+<abbr class="{{site.data.badge_colors['darkgrey']}}" onclick="filterSubject('')" style="cursor: pointer;">All</abbr>&ensp;
+<abbr class="{{site.data.badge_colors['cyan']}}" onclick="filterSubject('geometry')" style="cursor: pointer;">Geometry</abbr>&ensp;
+<abbr class="{{site.data.badge_colors['blue']}}" onclick="filterSubject('applied')" style="cursor: pointer;">Interdisciplinary</abbr>&ensp;
+<abbr class="{{site.data.badge_colors['green']}}" onclick="filterSubject('books')" style="cursor: pointer;">Children Books</abbr>&ensp;
+</p>
+</center>
+
+My <b>45+ pieces</b> both within geometry as well as on other topics are listed below in reverse chronological order by year. Note that authors on all of my publications appear alphabetically except in our Nature Scientific Reports paper, where authors are by contribution.
+Citations to my papers can be found on <a href="https://scholar.google.com/citations?user=5cLd6dIAAAAJ&hl=en">Google Scholar</a>.
+Paper tags are colored as follows:
+
+<center>
+<p>
+<span class="badge badge-danger">journal article</span>
+<span class="badge badge-primary">conference article</span> 
+<span class="badge badge-warning">editorial work</span> 
+<span class="badge badge-light">manuscript</span> .
+</p>
+</center>
+-->
+
 
 
 
