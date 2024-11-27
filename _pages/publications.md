@@ -59,7 +59,6 @@ For a more up-to-date list of publications, please visit [My Google Scholar Page
 
 <!-- Auto Category Label Creation -->
 <script>
-// Function to dynamically generate badge styles and elements
 document.addEventListener("DOMContentLoaded", function () {
   // Get all category tags
   const categoryTags = document.querySelectorAll(".category-tag");
@@ -80,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ]; // Expanded palette with diverse colors
   let colorIndex = 0;
 
-  categorySet.forEach(category => {
+  Array.from(categorySet).forEach(category => {
     const sanitizedCategory = category.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase(); // Sanitize category name
     categoryColors[sanitizedCategory] = colorPalette[colorIndex % colorPalette.length];
     colorIndex++;
@@ -116,9 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
 
   // Add a specific style for each category
-  for (const [category, color] of Object.entries(categoryColors)) {
+  for (const [sanitizedCategory, color] of Object.entries(categoryColors)) {
     styles += `
-      .badge-${category} {
+      .badge-${sanitizedCategory} {
         background-color: ${color};
       }
     `;
@@ -133,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ${Array.from(categorySet)
       .map(category => {
         const sanitizedCategory = category.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase(); // Sanitize category name
-        return `<abbr class="badge badge-${sanitizedCategory}" onclick="filterSubject('${category.toLowerCase()}')" style="cursor: pointer;">${category}</abbr>&ensp;`;
+        return `<abbr class="badge badge-${sanitizedCategory}" onclick="filterSubject('${sanitizedCategory}')" style="cursor: pointer;">${category}</abbr>&ensp;`;
       })
       .join("")}
   `;
@@ -145,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     centerElement.appendChild(badgeContainer);
   }
 });
+
 </script>
 <center>
   <!-- Dynamic badges will be inserted here by the script -->
