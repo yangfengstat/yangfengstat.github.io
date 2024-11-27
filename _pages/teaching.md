@@ -9,7 +9,7 @@ nav_order: 6
 
 ## Short Courses
 
-- An Introduction to the Statistical Foundations of Transfer Learning
+- [An Introduction to the Statistical Foundations of Transfer Learning](https://www.columbia.edu/~yt2661/STL.html)
 
 ## New York University (NYU)
 
