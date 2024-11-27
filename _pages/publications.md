@@ -81,7 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let colorIndex = 0;
 
   categorySet.forEach(category => {
-    categoryColors[category.toLowerCase()] = colorPalette[colorIndex % colorPalette.length];
+    const sanitizedCategory = category.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase(); // Sanitize category name
+    categoryColors[sanitizedCategory] = colorPalette[colorIndex % colorPalette.length];
     colorIndex++;
   });
 
@@ -117,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add a specific style for each category
   for (const [category, color] of Object.entries(categoryColors)) {
     styles += `
-      .badge-${category.replace(/\s+/g, "-").toLowerCase()} {
+      .badge-${category} {
         background-color: ${color};
       }
     `;
@@ -131,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
     <abbr class="badge badge-all" onclick="filterSubject('')" style="cursor: pointer;">All</abbr>&ensp;
     ${Array.from(categorySet)
       .map(category => {
-        const className = `badge-${category.replace(/\s+/g, "-").toLowerCase()}`;
-        return `<abbr class="badge ${className}" onclick="filterSubject('${category.toLowerCase()}')" style="cursor: pointer;">${category}</abbr>&ensp;`;
+        const sanitizedCategory = category.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase(); // Sanitize category name
+        return `<abbr class="badge badge-${sanitizedCategory}" onclick="filterSubject('${category.toLowerCase()}')" style="cursor: pointer;">${category}</abbr>&ensp;`;
       })
       .join("")}
   `;
