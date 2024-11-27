@@ -57,7 +57,7 @@ function filterSubject(filter) {
 For a more up-to-date list of publications, please visit [My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate)).
 
 
-<!-- Auto Category Label Creation -->
+<!-- Auto Category Label Creation 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   // Get all category tags
@@ -147,37 +147,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 <center>
-  <!-- Dynamic badges will be inserted here by the script -->
-</center>
-
-
-
-<!-- Example of Manually Adding the badge
-<center>
-<p>
-<abbr class="{{site.data.badge_colors['darkgrey']}}" onclick="filterSubject('')" style="cursor: pointer;">All</abbr>&ensp;
-<abbr class="{{site.data.badge_colors['cyan']}}" onclick="filterSubject('geometry')" style="cursor: pointer;">Geometry</abbr>&ensp;
-<abbr class="{{site.data.badge_colors['blue']}}" onclick="filterSubject('applied')" style="cursor: pointer;">Interdisciplinary</abbr>&ensp;
-<abbr class="{{site.data.badge_colors['green']}}" onclick="filterSubject('books')" style="cursor: pointer;">Children Books</abbr>&ensp;
-</p>
-</center>
-
-My <b>45+ pieces</b> both within geometry as well as on other topics are listed below in reverse chronological order by year. Note that authors on all of my publications appear alphabetically except in our Nature Scientific Reports paper, where authors are by contribution.
-Citations to my papers can be found on <a href="https://scholar.google.com/citations?user=5cLd6dIAAAAJ&hl=en">Google Scholar</a>.
-Paper tags are colored as follows:
-
-<center>
-<p>
-<span class="badge badge-danger">journal article</span>
-<span class="badge badge-primary">conference article</span> 
-<span class="badge badge-warning">editorial work</span> 
-<span class="badge badge-light">manuscript</span> .
-</p>
 </center>
 -->
 
+<style>
+  .badge {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  .badge:hover {
+    transform: scale(1.05);
+  }
+  .badge-all { background-color: #6c757d; } /* Default dark grey */
+  .badge-high-dimensional-statistics { background-color: #007bff; } /* Blue */
+  .badge-nonparametric-statistics { background-color: #28a745; } /* Green */
+  .badge-network-analysis { background-color: #17a2b8; } /* Cyan */
+  .badge-graphical-models { background-color: #ffc107; } /* Yellow */
+  .badge-classification { background-color: #fd7e14; } /* Orange */
+  .badge-neyman-pearson-classification { background-color: #dc3545; } /* Red */
+  .badge-model-averaging { background-color: #6f42c1; } /* Purple */
+  .badge-machine-learning { background-color: #20c997; } /* Teal */
+  .badge-epidemiology { background-color: #ff69b4; } /* Pink */
+  .badge-transfer-learning { background-color: #343a40; } /* Dark */
+  .badge-causal-inference { background-color: #ff4500; } /* Red-Orange */
+  .badge-multi-task-learning { background-color: #4682b4; } /* Steel Blue */
+  .badge-federated-learning { background-color: #800080; } /* Dark Purple */
+  .badge-differential-privacy { background-color: #8b4513; } /* Saddle Brown */
+</style>
 
-
+<center>
+  <p>
+    <abbr class="badge badge-all" onclick="filterSubject('')" style="cursor: pointer;">All</abbr>&ensp;
+    <abbr class="badge badge-high-dimensional-statistics" onclick="filterSubject('high-dimensional statistics')" style="cursor: pointer;">High-Dimensional Statistics</abbr>&ensp;
+    <abbr class="badge badge-nonparametric-statistics" onclick="filterSubject('nonparametric statistics')" style="cursor: pointer;">Nonparametric Statistics</abbr>&ensp;
+    <abbr class="badge badge-network-analysis" onclick="filterSubject('network analysis')" style="cursor: pointer;">Network Analysis</abbr>&ensp;
+    <abbr class="badge badge-graphical-models" onclick="filterSubject('graphical models')" style="cursor: pointer;">Graphical Models</abbr>&ensp;
+    <abbr class="badge badge-classification" onclick="filterSubject('classification')" style="cursor: pointer;">Classification</abbr>&ensp;
+    <abbr class="badge badge-neyman-pearson-classification" onclick="filterSubject('neyman-pearson classification')" style="cursor: pointer;">Neyman-Pearson Classification</abbr>&ensp;
+    <abbr class="badge badge-model-averaging" onclick="filterSubject('model averaging')" style="cursor: pointer;">Model Averaging</abbr>&ensp;
+    <abbr class="badge badge-machine-learning" onclick="filterSubject('machine learning')" style="cursor: pointer;">Machine Learning</abbr>&ensp;
+    <abbr class="badge badge-epidemiology" onclick="filterSubject('epidemiology')" style="cursor: pointer;">Epidemiology</abbr>&ensp;
+    <abbr class="badge badge-transfer-learning" onclick="filterSubject('transfer learning')" style="cursor: pointer;">Transfer Learning</abbr>&ensp;
+    <abbr class="badge badge-causal-inference" onclick="filterSubject('causal inference')" style="cursor: pointer;">Causal Inference</abbr>&ensp;
+    <abbr class="badge badge-multi-task-learning" onclick="filterSubject('multi-task learning')" style="cursor: pointer;">Multi-task Learning</abbr>&ensp;
+    <abbr class="badge badge-federated-learning" onclick="filterSubject('federated learning')" style="cursor: pointer;">Federated Learning</abbr>&ensp;
+    <abbr class="badge badge-differential-privacy" onclick="filterSubject('differential privacy')" style="cursor: pointer;">Differential Privacy</abbr>&ensp;
+  </p>
+</center>
 
 
 {% include bib_search.liquid %}
