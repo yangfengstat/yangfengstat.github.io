@@ -7,11 +7,147 @@ nav: true
 nav_order: 2
 ---
 
-<!-- _pages/publications.md -->
+<!-- _pages/pub_test.md -->
+
+<script>
+function filterSubject(filter) {
+  // Select all bibliography sections (years)
+  var years = document.querySelectorAll(".bibliography");
+
+  years.forEach(function (year) {
+    // Get all rows within this year
+    var rows = year.querySelectorAll(".row");
+    let hasVisibleRows = false;
+
+    rows.forEach(function (row) {
+      var categoryTag = row.querySelector(".category-tag");
+
+      // Check if the row matches the filter
+      if (categoryTag && categoryTag.textContent.trim().toLowerCase().includes(filter.toLowerCase())) {
+        row.style.display = ""; // Show matching rows
+        hasVisibleRows = true; // Mark as having visible rows
+      } else {
+        row.style.display = "none"; // Hide non-matching rows
+      }
+    });
+
+    // Check if the previous sibling (h2) exists and toggle its visibility
+    var yearHeading = year.previousElementSibling;
+    if (yearHeading && yearHeading.tagName === "H2") {
+      if (hasVisibleRows) {
+        yearHeading.style.display = ""; // Show the h2
+        year.style.display = ""; // Show the ol
+      } else {
+        yearHeading.style.display = "none"; // Hide the h2
+        year.style.display = "none"; // Hide the ol
+      }
+    }
+  });
+}
+</script>
+
+
+
+
+
 
 <!-- Bibsearch Feature -->
 
 For a more up-to-date list of publications, please visit [My Google Scholar Page](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en) ([By Year](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate)).
+
+
+<script>
+// Function to dynamically generate badge styles and elements
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all category tags
+  const categoryTags = document.querySelectorAll(".category-tag");
+  const categorySet = new Set(); // To store unique categories
+
+  // Extract unique categories
+  categoryTags.forEach(tag => {
+    const categories = tag.textContent.trim().split(",").map(cat => cat.trim());
+    categories.forEach(cat => categorySet.add(cat));
+  });
+
+  // Assign colors to categories
+  const categoryColors = {};
+  const colorPalette = [
+    "#6c757d", "#17a2b8", "#007bff", "#28a745", "#ffc107", "#fd7e14", "#dc3545", "#20c997",
+    "#6610f2", "#e83e8c", "#20b2aa", "#ffa07a", "#87cefa", "#32cd32", "#ff4500", "#800080",
+    "#808000", "#ff6347", "#4682b4", "#008080", "#000080", "#b8860b", "#9932cc", "#ff00ff"
+  ]; // Expanded palette with diverse colors
+  let colorIndex = 0;
+
+  categorySet.forEach(category => {
+    categoryColors[category.toLowerCase()] = colorPalette[colorIndex % colorPalette.length];
+    colorIndex++;
+  });
+
+  // Generate styles dynamically
+  const styleBlock = document.createElement("style");
+  let styles = `
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: capitalize;
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+      white-space: nowrap;
+      margin: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .badge:hover {
+      transform: scale(1.05);
+    }
+
+    /* Style for the "All" badge */
+    .badge-all {
+      background-color: #343a40; /* Dark grey */
+      color: white;
+    }
+  `;
+
+  // Add a specific style for each category
+  for (const [category, color] of Object.entries(categoryColors)) {
+    styles += `
+      .badge-${category.replace(/\s+/g, "-").toLowerCase()} {
+        background-color: ${color};
+      }
+    `;
+  }
+  styleBlock.textContent = styles;
+  document.head.appendChild(styleBlock);
+
+  // Generate badge elements
+  const badgeContainer = document.createElement("p");
+  badgeContainer.innerHTML = `
+    <abbr class="badge badge-all" onclick="filterSubject('')" style="cursor: pointer;">All</abbr>&ensp;
+    ${Array.from(categorySet)
+      .map(category => {
+        const className = `badge-${category.replace(/\s+/g, "-").toLowerCase()}`;
+        return `<abbr class="badge ${className}" onclick="filterSubject('${category.toLowerCase()}')" style="cursor: pointer;">${category}</abbr>&ensp;`;
+      })
+      .join("")}
+  `;
+
+  // Append the badges to the center element
+  const centerElement = document.querySelector("center");
+  if (centerElement) {
+    centerElement.innerHTML = ""; // Clear previous content
+    centerElement.appendChild(badgeContainer);
+  }
+});
+</script>
+
+<center>
+  <!-- Dynamic badges will be inserted here by the script -->
+</center>
+
 
 
 
