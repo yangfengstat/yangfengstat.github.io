@@ -112,7 +112,11 @@ Here you can find information about current team members and alumni who have bee
         Haolei Weng
       </a>
     </p>
-    <p>(2016)<br><em>Associate Professor, Michigan State University</em></p>
+    <p>(2017)<br><em>Associate Professor, Michigan State University</em></p>
+  </div>
+  <div class="person">
+    <img src="{{ page.image_path }}diego-franco-saldana.jpg" alt="Diego Franco Saldana">
+    <p>Diego Franco Saldana (2016)<br><em>Senior Data Scientist, TextNow</em></p>
   </div>
 </div>
 
