@@ -1,28 +1,36 @@
-- name: glmtrans
-  description: Transfer Learning under Regularized Generalized Linear Models
-  version: 2.0.0
-  link: https://cran.r-project.org/package=glmtrans
 - name: SIS
   description: Sure Independence Screening
   version: 0.8-8
   link: https://cran.r-project.org/package=SIS
-- name: nproc
-  description: Neyman-Pearson (NP) Classification Algorithms and NP Receiver
-  version: 2.1.5
-  link: https://cran.r-project.org/package=nproc
-- name: r02pro
-  description: 'R Programming: Zero to Pro'
-  version: '0.2'
-  link: https://cran.r-project.org/package=r02pro
-- name: pgraph
-  description: Build Dependency Graphs using Projection
-  version: '1.6'
-  link: https://cran.r-project.org/package=pgraph
 - name: RAMP
   description: Regularized Generalized Linear Models with Interaction Effects
   version: 2.0.2
   link: https://cran.r-project.org/package=RAMP
+- name: nproc
+  description: Neyman-Pearson (NP) Classification Algorithms and NP Receiver
+  version: 2.1.5
+  link: https://cran.r-project.org/package=nproc
+- name: pgraph
+  description: Build Dependency Graphs using Projection
+  version: '1.6'
+  link: https://cran.r-project.org/package=pgraph
 - name: RaSEn
   description: Random Subspace Ensemble Classification and Variable Screening
   version: 3.0.0
   link: https://cran.r-project.org/package=RaSEn
+- name: glmtrans
+  description: Transfer Learning under Regularized Generalized Linear Models
+  version: 2.0.0
+  link: https://cran.r-project.org/package=glmtrans
+- name: npcs
+  description: Neyman-Pearson Classification via Cost-Sensitive Learning
+  version: 0.1.1
+  link: https://cran.r-project.org/package=npcs
+- name: mtlgmm
+  description: Unsupervised Multi-Task and Transfer Learning on Gaussian
+  version: 0.1.0
+  link: https://cran.r-project.org/package=mtlgmm
+- name: r02pro
+  description: 'R Programming: Zero to Pro'
+  version: '0.2'
+  link: https://cran.r-project.org/package=r02pro
