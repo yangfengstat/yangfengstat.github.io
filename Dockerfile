@@ -13,6 +13,9 @@ LABEL authors="Amir Pourmand,George Araújo" \
       description="Docker image for al-folio academic template" \
       maintainer="Amir Pourmand"
 
+      # Add Python path to the PATH environment
+ENV PATH="/srv/jekyll/env/bin:$PATH"
+
 # uncomment these if you are having this issue with the build:
 # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
 # add a non-root user to the image with a specific group and user id to avoid permission issues
