@@ -40,8 +40,4 @@ His research is partially supported by
 
 [A Short CV](assets/pdf/Feng_Yang_Short_CV.pdf)
 
-## latest news
 
-{% for post in site.news limit:3 %}
-- **{{ post.date | date: "%Y-%m-%d" }}** [{{ post.title }}]({{ post.url }})
-{% endfor %}
