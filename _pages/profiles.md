@@ -124,53 +124,63 @@ Here you can find information about current team members and alumni who have bee
 ### Master’s Graduates
 <div class="people-grid">
   <div class="person">
-    <img src="{{ page.image_path }}vivien-wei.jpg" alt="Vivien Wei">
-    <p>Vivien Wei</p>
-  </div> 
-  <div class="person">
     <img src="{{ page.image_path }}zian-liu.jpg" alt="Zian Liu">
-    <p>Zian Liu</p>
+    <p>Zian Liu (2024)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}wanyi-wang.jpg" alt="Wanyi Wang">
-    <p>Wanyi Wang</p>
+    <p>Wanyi Wang (2024)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}cong-wang.jpg" alt="Cong Wang">
-    <p>Cong Wang</p>
+    <p>Cong Wang (2023)</p>
   </div>
-  <div class="person">
-    <img src="{{ page.image_path }}amy-ma.jpg" alt="Amy Ma">
-    <p>Amy Ma</p>
-  </div>
+
   <div class="person">
     <img src="{{ page.image_path }}deron-tsai.jpg" alt="Deron Tsai">
-    <p>Deron Tsai</p>
+    <p>Deron Tsai (2023)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}fan-bi.jpg" alt="Fan Bi">
-    <p>Fan Bi</p>
+    <p>Fan Bi (2023)</p>
+  </div>
+    <div class="person">
+    <img src="{{ page.image_path }}yawen-yuan.jpg" alt="Yawen Yuan">
+    <p>Yawen Yuan  (2023)</p>
+  </div>
+  <div class="person">
+    <img src="{{ page.image_path }}vivien-wei.jpg" alt="Vivien Wei">
+    <p>Vivien Wei (2023)</p>
+     </div> 
+    <div class="person">
+    <img src="{{ page.image_path }}jianan-zhu.jpg" alt="Jianan Zhu">
+    <p>Jianan Zhu (2022)</p>
+  </div>
+  
+
+  <div class="person">
+    <img src="{{ page.image_path }}yaojie-wang.jpg" alt="Yaojie Wang">
+    <p>Yaojie Wang (2022)</p>
+  </div>
+
+  <div class="person">
+    <img src="{{ page.image_path }}amy-ma.jpg" alt="Amy Ma">
+    <p>Amy Ma (2021)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}kehang-li.jpg" alt="Kehang Li">
-    <p>Kehang Li</p>
+    <p>Kehang Li (2021)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}shizhan-gong.jpg" alt="Shizhan Gong">
-    <p>Shizhan Gong</p>
+    <p>Shizhan Gong (2021)</p>
   </div>
   <div class="person">
     <img src="{{ page.image_path }}summer-yang.jpg" alt="Summer Yang">
-    <p>Summer Yang</p>
+    <p>Summer Yang (2021)</p>
   </div>
-  <div class="person">
-    <img src="{{ page.image_path }}yaojie-wang.jpg" alt="Yaojie Wang">
-    <p>Yaojie Wang</p>
-  </div>
-  <div class="person">
-    <img src="{{ page.image_path }}yawen-yuan.jpg" alt="Yawen Yuan">
-    <p>Yawen Yuan</p>
-  </div>
+
+
 </div>
 ---
 ### Visiting Students
