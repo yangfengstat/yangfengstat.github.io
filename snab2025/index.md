@@ -5,13 +5,11 @@ nav_title: SNAB 2025
 permalink: /snab2025/
 ---
 
-
-
 # Welcome to SNAB 2025
 
 The **2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)** will take place on **June 2-4, 2025** at the renowned [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in **Tokyo, Japan**.
 
-[Register Now](https://imstat.org/shop/the-2025-workshop-on-statistical-network-analysis-and-beyond-snab-2025/){: .button}
+<!-- [Register Now](https://imstat.org/shop/the-2025-workshop-on-statistical-network-analysis-and-beyond-snab-2025/){: .button} -->
 
 ![Hotel New Otani](assets/img/hotel.jpg "Hotel New Otani, 
 Tokyo"){: style="border-radius: 10px; max-width: 100%; margin: auto; display: block;"}
