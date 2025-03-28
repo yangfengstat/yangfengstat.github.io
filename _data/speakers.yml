@@ -1,7 +1,5 @@
 - name: Zhigang Bao
   affiliation: HKUST
-- name: Joshua Cape
-  affiliation: Univeristy of Wisconsin at Madison
 - name: Jinyuan Chang
   affiliation: SWUFE
 - name: Yang Feng
@@ -30,6 +28,10 @@
   affiliation: UC Irvine
 - name: Patrick Rubin-Delanchy
   affiliation: University of Edinburgh
+- name: Xiaotong Shen
+  affiliation: University of Minnesota
+- name: Hui Shen
+  affiliation: McGill University
 - name: Jingming Wang
   affiliation: University of Virginia
 - name: Junhui Wang
@@ -42,12 +44,18 @@
   affiliation: National University of Singapore
 - name: Yuting Wei
   affiliation: University of Pennsylvania
+- name: Yao Xie
+  affiliation: Georgia Tech
+- name: Lexing Xie
+  affiliation: ANU
 - name: Jiaming Xu
   affiliation: Duke University
 - name: Jeff Yao
   affiliation: CUHK-Shenzhen
 - name: Yi Yu
   affiliation: University of Warwick
+- name: Cun-Hui Zhang
+  affiliation: Rutgers University
 - name: Emma Jingfei Zhang
   affiliation: Emory University
 - name: Xinyu Zhang
