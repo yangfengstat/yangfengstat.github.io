@@ -15,7 +15,7 @@ profile:
     <p>New York, NY 10003</p>
     <p>Email: &#121;&#102;&#51;&#49;&#64;&#110;&#121;&#117;&#46;&#101;&#100;&#117;</p>
 
-news: false # includes a list of news items
+news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
