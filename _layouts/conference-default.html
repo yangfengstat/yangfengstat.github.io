@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-+ctbLgWY60CygPL9aS+6CXY0RKXZGZoc7ztWGLu3vX6p2EXD1+u7pHzGoElv9v4zXqa4xzT5E8+1mF1Qk7S/9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9TWYGZH3J"></script>
   <script>
@@ -12,19 +16,21 @@
     gtag('js', new Date());
     gtag('config', 'G-N9TWYGZH3J');
   </script>
-  
+
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/conference.css' | relative_url }}">
-  
+
   <style>
-    /* Base Styles */
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f9;
       color: #333;
-      background-color: #fff;
+      scroll-behavior: smooth;
     }
     .container {
       width: 90%;
@@ -32,73 +38,108 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-    /* Header */
     header.header {
-      background-color: #0056b3;
+      background: linear-gradient(90deg, #0056b3, #003366);
       color: #fff;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    header.header .site-title {
-      margin: 0;
-      font-size: 1.8rem;
+    .site-title {
+      font-family: 'Merriweather', serif;
       text-align: center;
+      font-size: 2.2rem;
+      margin: 0 0 0.5rem;
     }
     nav.nav {
-      text-align: center;
-      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
     nav.nav a.nav-link {
       color: #fff;
       text-decoration: none;
-      margin: 0 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      font-weight: 600;
     }
     nav.nav a.nav-link:hover {
       background-color: #004080;
+      transform: scale(1.05);
     }
-    /* Banner */
     .banner-container {
       position: relative;
       text-align: center;
-      margin-bottom: 1rem;
+      margin: 2rem 0;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
     .banner-container img.banner {
       width: 100%;
-      height: auto;
       display: block;
-      border-radius: 8px;
+      filter: brightness(0.95);
     }
     .banner-caption {
       position: absolute;
       bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1.25rem;
       color: #fff;
+      backdrop-filter: blur(5px);
     }
-    /* Main Content */
     main.main-content {
       padding: 2rem 0;
+      animation: fadeIn 1s ease-in-out;
     }
-    /* Footer */
+    main.main-content .container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    main.main-content .container:hover {
+      transform: translateY(-5px);
+    }
     footer.footer {
-      background-color: #7d2727;
+      background-color: #2f2f2f;
+      color: #ccc;
       text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      border-top: 1px solid #ddd;
+      padding: 2rem 0;
+      font-size: 0.95rem;
+      margin-top: 2rem;
     }
     footer.footer a {
-      color: #3b8867;
+      color: #79d1c3;
       text-decoration: none;
+      font-weight: bold;
     }
     footer.footer a:hover {
       text-decoration: underline;
+    }
+    .footer i {
+      margin: 0 0.4rem;
+      transition: transform 0.3s;
+    }
+    .footer i:hover {
+      transform: scale(1.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -130,7 +171,15 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; SNAB - {{ 'now' | date: "%Y" }} | <a href="{{ '/' | relative_url }}">Back to Main Site</a></p>
+      <p>
+        &copy; SNAB - {{ 'now' | date: "%Y" }} | <a href="{{ '/' | relative_url }}">Back to Main Site</a>
+      </p>
+      <p>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fas fa-envelope"></i>
+      </p>
     </div>
   </footer>
 </body>
