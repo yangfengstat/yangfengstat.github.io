@@ -19,7 +19,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-Yang Feng is a Professor of [Biostatistics](https://publichealth.nyu.edu/department/biostatistics) at the [School of Global Public Health](https://publichealth.nyu.edu/), while also serving as an affiliate faculty member at the [Center for Data Science](https://cds.nyu.edu/) and [PRIISM](https://steinhardt.nyu.edu/priism), at [New York University](https://www.nyu.edu/). 
+Yang Feng is a Professor and Ph.D. Director of [Biostatistics](https://publichealth.nyu.edu/department/biostatistics) at the [School of Global Public Health](https://publichealth.nyu.edu/), while also serving as an affiliate faculty member at the [Center for Data Science](https://cds.nyu.edu/) and [PRIISM](https://steinhardt.nyu.edu/priism), at [New York University](https://www.nyu.edu/). 
 
 Feng's research interests encompass the theoretical and methodological aspects of machine learning, high-dimensional statistics, network models, and nonparametric statistics, leading to a wealth of practical applications. He has published over 70 peer-reviewed
 articles with over **4,000** [Google Scholar Citations](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en). 
