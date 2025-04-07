@@ -1,0 +1,40 @@
+---
+layout: about
+title: about
+permalink: /
+subtitle: 
+
+profile:
+  align: right
+  image: Yang_Feng.jpg
+  image_circular: true # crops the image to make it circular
+  more_info: >
+    <p>708 Broadway, Room 433</p>
+    <p>Department of Biostatistics</p>
+    <p>New York University</p>
+    <p>New York, NY 10003</p>
+    <p>Email: &#121;&#102;&#51;&#49;&#64;&#110;&#121;&#117;&#46;&#101;&#100;&#117;</p>
+
+news: true # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
+---
+冯阳是纽约大学[全球公共卫生学院](https://publichealth.nyu.edu/)生物统计学系教授、博士项目主任，同时兼任该校[数据科学中心](https://cds.nyu.edu/)和[PRIISM中心](https://steinhardt.nyu.edu/priism)的附属教职成员。  
+
+冯阳的研究聚焦机器学习、高维统计、网络模型及非参数统计的理论与方法创新，并在多领域实现广泛应用。他已发表70余篇同行评审论文，[谷歌学术引用](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en)超过**4,000次**，现为  
+- *美国统计协会（ASA）会士*  
+- *数理统计学会（IMS）会士*  
+- *国际统计学会（ISI）当选会员*  
+
+目前担任以下期刊副主编：  
+- [《美国统计协会会刊》](https://www.tandfonline.com/journals/uasa20)  
+- [《应用统计年鉴》](https://imstat.org/journals-and-publications/annals-of-applied-statistics/)  
+- [《商业与经济统计杂志》](https://amstat.tandfonline.com/loi/jbes)  
+- [《计算与图形统计杂志》](https://www.tandfonline.com/toc/ucgs20/current)  
+
+研究项目获资助包括：  
+- **美国国家科学基金会项目[DMS-2324489](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2324489)**：  
+  **协作研究：高维多任务与迁移学习推断的新理论与方法**  
+
+[谷歌学术主页](https://scholar.google.com/citations?user=QXHb8CcAAAAJ&hl=en)（[按年份排序](https://scholar.google.com/citations?hl=en&user=QXHb8CcAAAAJ&view_op=list_works&sortby=pubdate)）  
+[简要简历](assets/pdf/Feng_Yang_Short_CV.pdf)  
