@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Professor Yang Feng from New York University, working on machine learning, social networks, nonparametrics, and causal inference.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: NYU, machine learning, socila networks, statistics, jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: NYU, machine learning, social networks, statistics, jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
