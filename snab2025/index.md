@@ -44,7 +44,7 @@ SNAB 2025 is a **three-day workshop** bringing together experts in **network sci
 
 - [**SNAB 2024**](https://sites.google.com/view/snab2024/) - Bahamas  
 - [**SNAB 2023**](https://www.snab2023.org/) - Anchorage, Alaska  
-- [**SNAB 2022**](https://yangfeng.hosting.nyu.edu/snab2022/) - New York  
+- [**SNAB 2022**](assets/pdf/SNAB2022 Workshop Brochure.pdf) - New York  
 - [**SNAB 2021**](https://dept.stat.lsa.umich.edu/~jizhu/snab2021/) - Virtual  
 
 ---
