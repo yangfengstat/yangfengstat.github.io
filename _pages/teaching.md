@@ -27,3 +27,7 @@ nav_order: 6
 - STAT G8325, Topics in Advanced Statistics: Statistical Analysis for Network Data
 - STAT G8325, Topics in Advanced Statistics: High dimensional variable selection
 - STAT W1211, Introduction to Statistics (with calculus)
+
+## Some notes
+
+[Cochran's Theorem: A Gentle Introduction](/assets/teaching/cochran's-theorem.pdf)
