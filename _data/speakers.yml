@@ -1,5 +1,5 @@
 - name: Zhigang Bao
-  affiliation: HKUST
+  affiliation: HKU
 - name: Jinyuan Chang
   affiliation: SWUFE
 - name: Yang Feng
@@ -22,20 +22,32 @@
   affiliation: Washington University in St. Louis
 - name: Jinchi Lv
   affiliation: University of Southern California
+- name: Takeru	Matsuda
+  affiliation: University of Tokyo
 - name: Xiaoyue Niu
   affiliation: Penn State University
 - name: Guangming Pan
   affiliation: Nanyang Technological University
+- name: Yumou	Qiu
+  affiliation: Peking University
 - name: Annie Qu
   affiliation: UC Irvine
 - name: Patrick Rubin-Delanchy
   affiliation: University of Edinburgh
+- name: Ergan	Shang
+  affiliation: Carnegie Mellon University
 - name: Xiaotong Shen
   affiliation: University of Minnesota
 - name: Hui Shen
   affiliation: McGill University
+- name: Tao	Shen
+  affiliation: National University of Singapore
 - name: Peter Song
   affiliation: University of Michigan
+- name: Issey	Sukeda
+  affiliation: University of Tokyo
+- name: Fan Wang
+  affiliation: University of Warwick
 - name: Jingming Wang
   affiliation: University of Virginia
 - name: Junhui Wang
@@ -56,6 +68,8 @@
   affiliation: Duke University
 - name: Jeff Yao
   affiliation: CUHK-Shenzhen
+- name: Qiwei	Yao
+  affiliation: London School of Economics
 - name: Yi Yu
   affiliation: University of Warwick
 - name: Cun-Hui Zhang
