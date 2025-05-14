@@ -1,0 +1,260 @@
+---
+layout: conference-default
+title: "Workshop Schedule"
+---
+
+<style>
+/* Modern Conference Schedule Styling */
+
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.schedule-nav,
+  #global-toggle,
+  button,
+  footer {
+    display: none !important;
+  }
+
+  h1, h2, h3 {
+    color: black !important;
+  }
+
+  .session-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+
+  table.schedule-table {
+    page-break-inside: avoid;
+  }
+
+  .schedule-day {
+    page-break-after: always;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.schedule-nav {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 0.75rem 0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  /* ADD THESE LINES: sticky effect */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.schedule-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.schedule-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Day Headers */
+.schedule-day h2 {
+  border-bottom: 3px solid #8f94fb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Session Cards */
+.session-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.session-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.session-card h3 {
+  margin-top: 0;
+  color: #4e54c8;
+  font-weight: 600;
+}
+
+.session-card small {
+  color: #777;
+}
+
+/* Tables */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-table th {
+  background-color: #f0f2f5;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Breaks */
+.coffee-break,
+.lunch-break,
+.banquet {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  color: #555;
+}
+
+/* Smooth fade-in on page load */
+.schedule-day {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden-abstract {
+  display: none !important;
+}
+</style>
+
+<h1>Workshop Schedule</h1>
+
+<nav class="schedule-nav">
+  <a href="#monday">Monday (June 2)</a>
+  <a href="#tuesday">Tuesday (June 3)</a>
+  <a href="#wednesday">Wednesday (June 4)</a>
+</nav>
+
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <button id="global-toggle" style="padding: 0.5rem 1.25rem; font-size: 1rem; background-color: #4e54c8; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Show All Abstracts
+  </button>
+</div>
+
+{% assign days = "Monday,Tuesday,Wednesday" | split: "," %}
+{% for day in days %}
+  <h2 id="{{ day | downcase }}">{{ day }}</h2>
+
+  {% assign talks = site.data.schedule | where: "day", day %}
+  {% assign sessions = talks | map: "session" | uniq %}
+
+  {% for session_id in sessions %}
+    {% assign session_talks = talks | where: "session", session_id %}
+    {% assign first = session_talks[0] %}
+
+    {% if first.type == 'event' %}
+      {% assign icon = "" %}
+      {% case first.session_title %}
+        {% when "Coffee Break" %}{% assign icon = "☕ " %}
+        {% when "Lunch" %}{% assign icon = "🍽️ " %}
+        {% when "Banquet" %}{% assign icon = "🎉 " %}
+        {% when "Group Photo" %}{% assign icon = "📸 " %}
+        {% when "Opening Remarks" %}{% assign icon = "🎤 " %}
+        {% when "Closing Remarks" %}{% assign icon = "🏁 " %}
+      {% endcase %}
+      <div class="session-card">
+        <h3>{{ icon }}{{ first.session_title }}</h3>
+        <p><strong>{{ first.time }}</strong></p>
+      </div>
+    {% else %}
+      <div class="session-card">
+        <h3>Session {{ first.session }} – {{ first.session_title }}<br><small>Chair · {{ first.chair }}</small></h3>
+        <p><strong>{{ first.time }}</strong></p>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+               {% if first.session_title contains "Poster" %}
+              <th>Name</th>
+              {% else %}
+              <th>Speaker</th>
+              {% endif %}
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for talk in session_talks %}
+            <tr>
+              <td><strong>{{ talk.speaker }}</strong><br>
+              {% if talk.Affliation and talk.Affliation != "" %}
+              <small>{{ talk.Affliation }}</small>
+              {% endif %}</td>
+              <td>
+                <em>{{ talk.title }}</em><br>
+                <div class="abstract-content">
+                  {% if talk.abstract and talk.abstract != "" %}
+                    {{ talk.abstract }}
+                  {% else %}
+                    <em>Abstract coming soon.</em>
+                  {% endif %}
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById("global-toggle");
+  const abstracts = document.querySelectorAll(".abstract-content");
+  let visible = false;
+
+  abstracts.forEach(div => div.classList.add("hidden-abstract"));
+
+  toggleButton.addEventListener("click", function() {
+    abstracts.forEach(div => div.classList.toggle("hidden-abstract"));
+    visible = !visible;
+    toggleButton.textContent = visible ? "Hide All Abstracts" : "Show All Abstracts";
+  });
+});
+</script>
