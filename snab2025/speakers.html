@@ -56,7 +56,7 @@ title: "Speakers & Poster Presenters"
   {%- assign parts = item | split: "|||" -%}
   {%- assign full_name = parts[1] -%}
   {%- assign affil = parts[2] -%}
-  {%- assign filename = full_name | downcase | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
+  {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
   <li>
     <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="speaker-photo">
     <div>
@@ -90,7 +90,7 @@ title: "Speakers & Poster Presenters"
   {%- assign parts = item | split: "|||" -%}
   {%- assign full_name = parts[1] -%}
   {%- assign affil = parts[2] -%}
-  {%- assign filename = full_name | downcase | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
+  {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
   <li>
     <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="speaker-photo">
     <div>
