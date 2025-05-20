@@ -11,7 +11,7 @@ Address: [4-1 Kioicho, Chiyoda City, Tokyo 102-8578, Japan](https://maps.app.goo
 
 Airport Limousine Bus from Narita Airport: https://www.limousinebus.co.jp/en/busstop/reserve/HotelNewOtani/?dir=1&a=n
 
-More trasnsportation information can be found on the [Hotel New Otani website](https://www.newotani.co.jp/en/tokyo/access/).
+More transportation information can be found on the [Hotel New Otani website](https://www.newotani.co.jp/en/tokyo/access/).
 
 
 
