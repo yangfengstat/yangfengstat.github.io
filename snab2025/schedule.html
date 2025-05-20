@@ -164,6 +164,20 @@ body {
 
 <h1>Workshop Schedule</h1>
 
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
 <nav class="schedule-nav">
   <a href="#monday">Monday (June 2)</a>
   <a href="#tuesday">Tuesday (June 3)</a>
@@ -228,7 +242,7 @@ body {
                 <em>{{ talk.title }}</em><br>
                 <div class="abstract-content">
                   {% if talk.abstract and talk.abstract != "" %}
-                    {{ talk.abstract }}
+                    Abstract: {{ talk.abstract }}
                   {% else %}
                     <em>Abstract coming soon.</em>
                   {% endif %}
