@@ -110,7 +110,7 @@ SNAB 2025 is a **three-day workshop** bringing together experts in **network sci
 
 <section class="section">
   <ul class="organizer-list">
-    {% assign organizers = "Yang Feng|New York University|yang_feng.jpg,Jiashun Jin|Carnegie Mellon University|jiashun_jin.jpg,Qingfeng Liu|Hosei University|qingfeng_liu.jpg,Maggie Niu|Penn State University|maggie_niu.jpg,Ji Zhu|University of Michigan|ji_zhu.jpg" | split: "," %}
+    {% assign organizers = "Yang Feng|New York University|Yang_Feng.jpg,Jiashun Jin|Carnegie Mellon University|Jiashun_Jin.jpg,Qingfeng Liu|Hosei University|Qingfeng_Liu.jpg,Maggie Niu|Penn State University|Maggie_Niu.jpg,Ji Zhu|University of Michigan|Ji_Zhu.jpg" | split: "," %}
     {% for org in organizers %}
       {% assign parts = org | split: "|" %}
       <li>
