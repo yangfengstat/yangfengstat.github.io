@@ -4,101 +4,147 @@ title: "Speakers & Poster Presenters"
 ---
 
 <style>
-.speaker-list, .poster-list {
-  list-style-type: none;
-  padding-left: 0;
-}
-.speaker-list li, .poster-list li {
-  background: white;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  display: flex;
-  align-items: center;
-}
-.speaker-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1rem;
-  border: 2px solid #ddd;
-}
-.speaker-list li:hover, .poster-list li:hover {
-  background-color: #f9fafc;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  :root {
+    --accent-color: #3b82f6;
+    --card-bg: #ffffff;
+    --card-hover-bg: #f3f7fb;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+
+  .section {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+  }
+
+  /* Increased image size for stronger visual impact */
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .speaker-list, .poster-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .speaker-list li, .poster-list li {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .speaker-list li:hover, .poster-list li:hover {
+    background: var(--card-hover-bg);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .speaker-info h3 {
+    margin: 0 0 0.25rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .speaker-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+  }
 </style>
 
 <h1>Speakers & Poster Presenters</h1>
 
-<h2>Invited Speakers</h2>
-<ul class="speaker-list">
-{%- assign speaker_rows = site.data.schedule | where: "type", "talk" -%}
-{%- assign speakers_raw = "" | split: "" -%}
+<section class="section">
+  <h2>Invited Speakers</h2>
+  <ul class="speaker-list">
+    {%- assign speaker_rows = site.data.schedule | where: "type", "talk" -%}
+    {%- assign speakers_raw = "" | split: "" -%}
+    {%- for row in speaker_rows -%}
+      {%- if row.session_title contains "Poster" -%}
+        {%- continue -%}
+      {%- endif -%}
+      {%- assign name = row.speaker -%}
+      {% unless speakers_raw contains name %}
+        {%- assign last_name = name | split: " " | last -%}
+        {%- assign affil = row.Affliation | default: "" -%}
+        {%- assign record = last_name | append: "|||" | append: name | append: "|||" | append: affil -%}
+        {%- assign speakers_raw = speakers_raw | push: record -%}
+      {% endunless %}
+    {%- endfor -%}
+    {%- assign speakers_sorted = speakers_raw | sort -%}
+    {%- for item in speakers_sorted -%}
+      {%- assign parts = item | split: "|||" -%}
+      {%- assign full_name = parts[1] -%}
+      {%- assign affil = parts[2] -%}
+      {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
+      <li>
+        <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="profile-photo">
+        <div class="speaker-info">
+          <h3>{{ full_name }}</h3>
+          {% if affil != "" %}<p>{{ affil }}</p>{% endif %}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
 
-{%- for row in speaker_rows -%}
-  {%- if row.session_title contains "Poster" -%}
-    {%- continue -%}
-  {%- endif -%}
-  {%- assign name = row.speaker -%}
-  {% unless speakers_raw contains name %}
-    {%- assign last_name = name | split: " " | last -%}
-    {%- assign affil = row.Affliation | default: "" -%}
-    {%- assign record = last_name | append: "|||" | append: name | append: "|||" | append: affil -%}
-    {%- assign speakers_raw = speakers_raw | push: record -%}
-  {% endunless %}
-{%- endfor -%}
-
-{%- assign speakers_sorted = speakers_raw | sort -%}
-
-{%- for item in speakers_sorted -%}
-  {%- assign parts = item | split: "|||" -%}
-  {%- assign full_name = parts[1] -%}
-  {%- assign affil = parts[2] -%}
-  {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
-  <li>
-    <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="speaker-photo">
-    <div>
-      <strong>{{ full_name }}</strong>
-      {% if affil != "" %}
-        <br><small>{{ affil }}</small>
-      {% endif %}
-    </div>
-  </li>
-{%- endfor -%}
-</ul>
-
-<h2>Poster Presenters</h2>
-<ul class="poster-list">
-{%- assign poster_rows = site.data.schedule | where: "type", "talk" | where_exp: "item", "item.session_title contains 'Poster'" -%}
-{%- assign posters_raw = "" | split: "" -%}
-
-{%- for row in poster_rows -%}
-  {%- assign name = row.speaker -%}
-  {% unless posters_raw contains name %}
-    {%- assign last_name = name | split: " " | last -%}
-    {%- assign affil = row.Affliation | default: "" -%}
-    {%- assign record = last_name | append: "|||" | append: name | append: "|||" | append: affil -%}
-    {%- assign posters_raw = posters_raw | push: record -%}
-  {% endunless %}
-{%- endfor -%}
-
-{%- assign posters_sorted = posters_raw | sort -%}
-
-{%- for item in posters_sorted -%}
-  {%- assign parts = item | split: "|||" -%}
-  {%- assign full_name = parts[1] -%}
-  {%- assign affil = parts[2] -%}
-  {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
-  <li>
-    <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="speaker-photo">
-    <div>
-      <strong>{{ full_name }}</strong>
-      {% if affil != "" %}
-        <br><small>{{ affil }}</small>
-      {% endif %}
-    </div>
-  </li>
-{%- endfor -%}
-</ul>
+<section class="section">
+  <h2>Poster Presenters</h2>
+  <ul class="poster-list">
+    {%- assign poster_rows = site.data.schedule | where: "type", "talk" | where_exp: "item", "item.session_title contains 'Poster'" -%}
+    {%- assign posters_raw = "" | split: "" -%}
+    {%- for row in poster_rows -%}
+      {%- assign name = row.speaker -%}
+      {% unless posters_raw contains name %}
+        {%- assign last_name = name | split: " " | last -%}
+        {%- assign affil = row.Affliation | default: "" -%}
+        {%- assign record = last_name | append: "|||" | append: name | append: "|||" | append: affil -%}
+        {%- assign posters_raw = posters_raw | push: record -%}
+      {% endunless %}
+    {%- endfor -%}
+    {%- assign posters_sorted = posters_raw | sort -%}
+    {%- for item in posters_sorted -%}
+      {%- assign parts = item | split: "|||" -%}
+      {%- assign full_name = parts[1] -%}
+      {%- assign affil = parts[2] -%}
+      {%- assign filename = full_name | replace: ' ', '_' | replace: '.', '' | append: '.jpg' -%}
+      <li>
+        <img src="{{ '/assets/images/speakers/' | append: filename | relative_url }}" alt="{{ full_name }}" class="profile-photo">
+        <div class="speaker-info">
+          <h3>{{ full_name }}</h3>
+          {% if affil != "" %}<p>{{ affil }}</p>{% endif %}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
