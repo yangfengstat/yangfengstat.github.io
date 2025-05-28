@@ -160,9 +160,49 @@ body {
 .hidden-abstract {
   display: none !important;
 }
+
+/* PDF Download Buttons */
+.pdf-download {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pdf-download:hover {
+  background: linear-gradient(90deg, #3a3fc0, #7378f5);
+  transform: translateY(-2px);
+}
 </style>
 
-<h1>Workshop Schedule</h1>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+  <h1 style="margin: 0;">Workshop Schedule</h1>
+  <a
+    href="{{ '/assets/Full_Workshop_Schedule.pdf' | relative_url }}"
+    download
+    class="pdf-download"
+    target="_blank"
+    rel="noopener"
+  >
+    ⬇️ PDF
+  </a>
+  <a
+    href="{{ '/assets/Workshop_Schedule_with_Abstracts.pdf' | relative_url }}"
+    download
+    class="pdf-download"
+    target="_blank"
+    rel="noopener"
+  >
+    ⬇️ PDF with Abstracts
+  </a>
+</div>
+
 
 <!-- MathJax for LaTeX rendering -->
 <script>
