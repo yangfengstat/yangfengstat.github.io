@@ -159,6 +159,8 @@ def generate_workshop_pdf(csv_path: str, output_path: str):
         current_session = None
         speakers = []
         for _, row in day_df.iterrows():
+            if row.get('session') in [22, 99]:
+                continue
             kind = row['type']
             if kind == 'event':
                 # If previous session speakers pending, add them before event
@@ -207,6 +209,8 @@ def generate_abstracts_pdf(csv_path: str, output_path: str):
 
         current_session = None
         for _, row in day_df.iterrows():
+            if row.get('session') in [22, 99]:
+                continue
             kind = row['type']
             if kind == 'event':
                 pdf.add_session_title('', row['session_title'], row['chair'] or None, row['time'] if 'time' in row else None)
