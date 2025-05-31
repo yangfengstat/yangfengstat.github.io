@@ -9,8 +9,7 @@ The conference will be held at the [Hotel New Otani](https://www.newotani.co.jp/
 
 Address: [4-1 Kioicho, Chiyoda City, Tokyo 102-8578, Japan](https://maps.app.goo.gl/hV4t3v8UkvJFx7N18)
 
-All talks will take place in the [Crescent Room](https://www.newotani.co.jp/en/tokyo/banquet/hall/crescent/). It is located in the Garden Court
-Banquet Floor. 
+All talks will take place in the [Crescent Room](https://www.newotani.co.jp/en/tokyo/banquet/hall/crescent/). It is located in the Garden Court, Banquet Floor. 
 
 ![Floor Plan](/snab2025/assets/img/floorplan.png "Hotel New Otani, Tokyo"){: style="border-radius: 10px; max-width: 100%; margin: auto; display: block;" }
 
