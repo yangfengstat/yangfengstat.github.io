@@ -4,7 +4,6 @@ title: "SNAB 2025"
 nav_title: SNAB 2025
 permalink: /snab2025/
 ---
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -84,7 +83,10 @@ permalink: /snab2025/
   }
 </style>
 
-# Welcome to SNAB 2025
+<div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin: 2rem 0 1rem;">
+  <img src="assets/img/snab.jpg" alt="SNAB 2025 Logo" style="max-height: 90px; opacity: 0.7; border-radius: 6px;">
+  <h1 style="margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color);">Welcome to SNAB 2025</h1>
+</div>
 
 The **2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)** will take place on **June 2-4, 2025** at the renowned [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in **Tokyo, Japan**.
 
