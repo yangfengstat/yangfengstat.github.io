@@ -84,7 +84,7 @@ permalink: /snab2025/
 </style>
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin: 2rem 0 1rem;">
-  <img src="assets/img/snab.jpg" alt="SNAB 2025 Logo" style="max-height: 90px; opacity: 0.7; border-radius: 6px;">
+  <img src="assets/img/snab.jpg" alt="SNAB 2025 Logo" style="max-height: 90px; opacity: 1; border-radius: 6px;">
   <h1 style="margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color);">Welcome to SNAB 2025</h1>
 </div>
 
