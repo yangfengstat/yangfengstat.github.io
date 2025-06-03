@@ -99,7 +99,7 @@ The **2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)** wil
 SNAB 2025 is a **three-day workshop** bringing together experts in **network science** and related fields. The conference serves as a platform for sharing cutting-edge research and fostering collaboration.
 
 ### Topics Include:
-- Statistical network modeling
+- Statistical network modeling 
 - Tensor analysis and modeling
 - Deep learning
 - Transfer learning and multi-task learning
