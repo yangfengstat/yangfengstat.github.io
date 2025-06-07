@@ -90,7 +90,50 @@ permalink: /snab2025/
 
 The **2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)** will take place on **June 2-4, 2025** at the renowned [Hotel New Otani](https://www.newotani.co.jp/en/tokyo/) in **Tokyo, Japan**.
 
+
 ![Hotel New Otani](assets/img/hotel.jpg "Hotel New Otani, Tokyo"){: style="border-radius: 10px; max-width: 100%; margin: auto; display: block;" }
+---
+
+## Photo Gallery
+
+<div style="max-width: 1000px; margin: 2rem auto;">
+  <style>
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+
+  <div class="slideshow-container">
+    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/snab2025/assets/img/photos/'" %}
+    {% for img in gallery_images %}
+      <img class="mySlides" src="{{ img.path | relative_url }}" alt="SNAB photo">
+    {% endfor %}
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</div>
 
 ---
 
@@ -144,5 +187,7 @@ We are grateful to our sponsors for their support of SNAB 2025:
 ![IMS](assets/img/ims.png "IMS"){: style="border-radius: 10px; max-width: 20%; margin: 20px auto; display: block;" }
 
 ---
+
+
 
 We look forward to seeing you at **SNAB 2025** in Tokyo!
