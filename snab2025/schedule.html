@@ -181,30 +181,9 @@ body {
 }
 </style>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-  <h1 style="margin: 0;">Workshop Schedule</h1>
-  <a
-    href="{{ '/assets/Full_Workshop_Schedule.pdf' | relative_url }}"
-    download
-    class="pdf-download"
-    target="_blank"
-    rel="noopener"
-  >
-    ⬇️ PDF
-  </a>
-  <a
-    href="{{ '/assets/Workshop_Schedule_with_Abstracts.pdf' | relative_url }}"
-    download
-    class="pdf-download"
-    target="_blank"
-    rel="noopener"
-  >
-    ⬇️ PDF with Abstracts
-  </a>
-</div>
 
 
-<!-- MathJax for LaTeX rendering -->
+
 <script>
   window.MathJax = {
     tex: {
@@ -231,6 +210,14 @@ body {
 </div>
 
 {% assign days = "Monday,Tuesday,Wednesday" | split: "," %}
+
+{% comment %}
+  *** HIGHLIGHT: CHANGE #1 of 2 ***
+  Create an array of all static file paths once for efficient checking later.
+  The path format depends on your Jekyll setup, but '/<path>' is common.
+{% endcomment %}
+{% assign all_static_paths = site.static_files | map: 'path' %}
+
 {% for day in days %}
   <h2 id="{{ day | downcase }}">{{ day }}</h2>
 
@@ -274,10 +261,26 @@ body {
           <tbody>
             {% for talk in session_talks %}
             <tr>
-              <td><strong>{{ talk.speaker }}</strong><br>
-              {% if talk.Affliation and talk.Affliation != "" %}
-              <small>{{ talk.Affliation }}</small>
-              {% endif %}</td>
+             <td>
+                <strong>{{ talk.speaker }}</strong><br>
+                {% if talk.Affliation and talk.Affliation != "" %}
+                  <small>{{ talk.Affliation }}</small><br>
+                {% endif %}
+
+                {% comment %}
+                  *** HIGHLIGHT: CHANGE #2 of 2 ***
+                  Check if the PDF file exists before showing the download link.
+                {% endcomment %}
+                {% assign plain_filename = talk.speaker | append: '.pdf' %}
+                {% assign file_path_to_check = '/snab2025/assets/talks/' | append: plain_filename %}
+
+                {% if all_static_paths contains file_path_to_check %}
+                  <a href="{{ 'snab2025/assets/talks/' | relative_url }}{{ plain_filename | uri_escape }}"
+                     target="_blank" rel="noopener">
+                    Slides 📑
+                  </a>
+                {% endif %}
+              </td>
               <td>
                 <em>{{ talk.title }}</em><br>
                 <div class="abstract-content">
